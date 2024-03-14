@@ -29,7 +29,7 @@ body:
       value: |
         ## Make a minimal reproduction
         Please have a minimal reproduction of your issue. Please list down your repro steps in detail. 
-        You can also have a repro video attached with the issue. Attach a sample manifest which can be used to repro your issue. You can add these to a Git repo and share it with us.
+        You can also have a repro video attached with the issue. Attach a sample manifest which can be used to repro your issue. You can add these to a private Git repo and share it with us.
         This should have easy to understand steps and manifest. The clearer the steps, the easier it is for us to fix the issue. 
         Please share relevant network logs or diagnostic logs also in the repo.  
         If this is a tenant specific issue, please send an email to <> with your Github Issue Title as the subject and a test user account in the body.  
