@@ -1,0 +1,152 @@
+name: Bug Report 🪲
+description: Create a bug report to help us improve
+title: '[Bug]: '
+body:
+  - type: markdown
+    attributes:
+      value: |
+        # Please follow these steps first:
+  - type: markdown
+    attributes:
+      value: |
+        ## Troubleshoot
+        If you have an issue with any Office-JS API and it is not behaving as expected, please go through this [documentation](https://learn.microsoft.com/en-us/office/dev/add-ins/) and this [Javascript API Browser](https://learn.microsoft.com/en-us/javascript/api/) to check if your expectations are correct. 
+        In some cases, different platforms behave differently because of platform limitations. These should be documented in the link above.  
+  - type: markdown
+    attributes:
+      value: |
+        ## Ask for help through appropriate channels
+        We have several forums where you can ask the developer community questions about your code. Try one of the following forums to ask technical questions about:
+        - [Microsoft Copilot](https://copilot.microsoft.com)
+        - [Developing Office Add-ins for Word, Excel, PowerPoint, Outlook, Project, Visio, and OneNote](https://docs.microsoft.com/answers/topics/office-addins-dev.html)
+        - [Access programming in Office](https://docs.microsoft.com/answers/topics/office-access-dev.html)
+        - [Developing COM or VSTO Add-ins for Office](https://docs.microsoft.com/answers/topics/office-vsto-com-dev.html)
+        - [Office JavaScript API](https://docs.microsoft.com/answers/topics/office-js-dev.html)
+        - [SharePoint and OneDrive development](https://docs.microsoft.com/answers/topics/sharepoint-dev.html)
+        - [Deploying and publishing Office or SharePoint apps to AppSource](https://docs.microsoft.com/answers/topics/microsoft-365-apps-publishing-dev.html)
+  - type: markdown
+    attributes:
+      value: |
+        ## Make a minimal reproduction
+        Please have a minimal reproduction of your issue. Please list down your repro steps in detail. 
+        You can also have a repro video attached with the issue. Attach a sample manifest which can be used to repro your issue. You can add these to a Git repo and share it with us.
+        This should have easy to understand steps and manifest. The clearer the steps, the easier it is for us to fix the issue. 
+        Please share relevant network logs or diagnostic logs also in the repo.  
+        If this is a tenant specific issue, please send an email to <> with your Github Issue Title as the subject and a test user account in the body.  
+  - type: markdown
+    attributes:
+      value: |
+        > [!IMPORTANT]
+        > Bug reports without proper repro steps will be rejected.
+
+        ---
+  - type: markdown
+    attributes:
+      value: |
+        ## How to collect logs
+        #Mac
+        Go to Help-> Collect Diagnostics -> Get Started-> Collect Logs .Copy the Incident ID and share 
+        #Mobile
+        Repro the issue ,go back to Help & Feedback->Collect Diagnostics , Click on Get Started 
+        Click on Upload Outlook Logs, continue with the steps until you get a confirmation that all logs are uploaded.
+  - type: input
+    id: platform
+    attributes:
+      label: Platform [Windows,Mac, iOS, Android, Office on the web] 
+      description: |
+        The Platform you are using.
+    validations:
+      required: true
+  - type: input
+    id: host
+    attributes:
+      label: Host [Excel, Word, PowerPoint, New Outlook, Legacy Outlook etc.] 
+      description: |
+        The Host you are using.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Office version number 
+      description: |
+        Version of the Office App you are using.
+        Check if this bug is present on latest version.
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Browser (If using Office on the web, use NA otherwise)
+    validations:
+      required: false
+  - type: input
+    id: isProd
+    attributes:
+      label: Is this add-in published or in development stage 
+    validations:
+      required: true
+  - type: input
+    id: users
+    attributes:
+      label: If this is a Prod add-in please give an estimate of the number of users impacted 
+    validations:
+      required: false
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: Please add accurate repro steps and add link to a manifest and video repro.
+      placeholder: |
+        Example steps (replace with your own):
+        1. Install the add-in at <link>
+        2. Do this
+        3. Error condition
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: A description of what you expect to happen.
+      placeholder: I expect the addin to behave this way
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: |
+        A description of the actual behaviour behavior.
+        Please include any relevant output here, especially any error messages.
+      placeholder: Error Scenario!
+    validations:
+      required: true
+  - type: input
+    id: past
+    attributes:
+      label: Was this working in the past
+    validations:
+      required: true
+  - type: input
+    id: pastversion
+    attributes:
+      label: Working version
+    validations:
+      required: false
+  - type: textarea
+    id: details
+    attributes:
+      label: Any other relevant details
+      description: Anything else that might be relevant
+    validations:
+      required: false
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Please Confirm the following
+      options:
+        - label: I have already read the documentation listed here
+          required: true
+        - label: I have already searched if this issue has been reported before.
+          required: true
